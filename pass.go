@@ -13,6 +13,8 @@ import (
 	"github.com/nbutton23/zxcvbn-go"
 )
 
+//go:generate go-bindata -nomemcopy static/...
+
 var words []string
 var max *big.Int
 
