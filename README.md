@@ -14,4 +14,4 @@ import (
 password := xkcdpass.GenerateDefault()
 ```
 
-For more detailed usage options, check the docs.
+For more detailed usage options, check the [docs](https://godoc.org/github.com/happeens/xkcdpass).
