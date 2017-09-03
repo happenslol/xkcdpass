@@ -1,7 +1,6 @@
 package xkcdpass
 
 import (
-	"fmt"
 	"testing"
 	"unicode"
 
@@ -25,7 +24,7 @@ func TestGenerateDefault(t *testing.T) {
 
 func TestGenerateDefaultChecked(t *testing.T) {
 	for i := 0; i < 5; i++ {
-		pass := GenerateDefaultChecked(i)
+		pass := GenerateDefaultChecked()
 		entropy := zxcvbn.PasswordStrength(pass, nil)
 		if entropy.Score < i {
 			t.Errorf("Failed to generate password with a score of at least %v", i)
