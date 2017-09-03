@@ -1,6 +1,5 @@
-// Package xkcdpass provides functions for generating random passwords consisting of
-// words taken from a dictionary.
-// The wordlist is provided by the EFF (https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases).
+// Package xkcdpass generates secure random passwords that are (relatively) easy to memorize.
+// It uses a dictionary provided specifically for passphrase generation by the EFF (https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) and has an option for checking strength of the generated passwords using the zxcvbn library (https://github.com/nbutton23/zxcvbn-go).
 // Inspired by https://xkcd.com/936/
 package xkcdpass
 
