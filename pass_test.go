@@ -10,7 +10,6 @@ import (
 
 func TestGenerateDefault(t *testing.T) {
 	pass := GenerateDefault()
-	fmt.Printf("generated password %v\n", pass)
 
 	numUppercase := 0
 	for _, c := range pass {
@@ -27,7 +26,6 @@ func TestGenerateDefault(t *testing.T) {
 func TestGenerateDefaultChecked(t *testing.T) {
 	for i := 0; i < 5; i++ {
 		pass := GenerateDefaultChecked(i)
-		fmt.Printf("generated password %v\n", pass)
 		entropy := zxcvbn.PasswordStrength(pass, nil)
 		if entropy.Score < i {
 			t.Errorf("Failed to generate password with a score of at least %v", i)
