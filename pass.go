@@ -9,10 +9,11 @@ import (
 	"math/big"
 	"strings"
 
+	static "github.com/happeens/xkcdpass/static"
 	"github.com/nbutton23/zxcvbn-go"
 )
 
-//go:generate go-bindata -nomemcopy static/...
+//go:generate go-bindata -nomemcopy static/... -o static/bindata.go
 
 var words []string
 var max *big.Int
@@ -21,7 +22,7 @@ const defaultLength = 4
 const defaultStrength = 4
 
 func init() {
-	data, err := Asset("static/default")
+	data, err := static.Asset("static/default")
 	if err != nil {
 		panic("Failed to read word list: " + err.Error())
 	}
